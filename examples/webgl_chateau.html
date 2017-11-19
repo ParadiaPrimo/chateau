@@ -46,7 +46,8 @@
 			var mainwall;
 
 			//TOIT PRINCIPAL
-			var conea_1,  conea_2, conea_3;
+			var coneb_1, coneb_2, coneb_3;
+			var conec_1, conec_2, conec_3;
 			var cone_pic;
 
 			init();
@@ -794,6 +795,60 @@
 						conea_3.position.z = 510;
 						scene.add( conea_3 );
 
+												//CONES: B (1)
+	                	var geometry = new THREE.ConeBufferGeometry( 25, 45, 30 );
+						var material = new THREE.MeshBasicMaterial( {map: gold} );
+						coneb_1 = new THREE.Mesh( geometry, material );
+						coneb_1.position.x = 220;
+						coneb_1.position.y = 440;
+						coneb_1.position.z = 457;
+						scene.add( coneb_1 );
+
+						//CONES: B (2)
+	                	var geometry = new THREE.ConeBufferGeometry( 25, 45, 30 );
+						var material = new THREE.MeshBasicMaterial( {map: gold} );
+						coneb_2 = new THREE.Mesh( geometry, material );
+						coneb_2.position.x = 220;
+						coneb_2.position.y = 500;
+						coneb_2.position.z = 485;
+						scene.add( coneb_2 );
+
+						//CONES: B (3)
+	                	var geometry = new THREE.ConeBufferGeometry( 25, 45, 30 );
+						var material = new THREE.MeshBasicMaterial( {map: gold} );
+						coneb_3 = new THREE.Mesh( geometry, material );
+						coneb_3.position.x = 230;
+						coneb_3.position.y = 540;
+						coneb_3.position.z = 540;
+						scene.add( coneb_3 );
+
+						//CONES: C (1)
+	                	var geometry = new THREE.ConeBufferGeometry( 25, 45, 30 );
+						var material = new THREE.MeshBasicMaterial( {map: gold} );
+						conec_1 = new THREE.Mesh( geometry, material );
+						conec_1.position.x = 380;
+						conec_1.position.y = 440;
+						conec_1.position.z = 457;
+						scene.add( conec_1 );
+
+						//CONES: C (2)
+	                	var geometry = new THREE.ConeBufferGeometry( 25, 45, 30 );
+						var material = new THREE.MeshBasicMaterial( {map: gold} );
+						conec_2 = new THREE.Mesh( geometry, material );
+						conec_2.position.x = 370;
+						conec_2.position.y = 500;
+						conec_2.position.z = 485;
+						scene.add( conec_2 );
+
+						//CONES: C (3)
+	                	var geometry = new THREE.ConeBufferGeometry( 25, 45, 30 );
+						var material = new THREE.MeshBasicMaterial( {map: gold} );
+						conec_3 = new THREE.Mesh( geometry, material );
+						conec_3.position.x = 365;
+						conec_3.position.y = 540;
+						conec_3.position.z = 540;
+						scene.add( conec_3 );
+
 						//CONE PIC
 	                	var geometry = new THREE.ConeBufferGeometry( 30,45, 40);
 						var material = new THREE.MeshBasicMaterial( {map: gold} );
@@ -871,6 +926,22 @@
 				conea_1.rotation.x = -20.2;
 				conea_2.rotation.x = -19.8;
 				conea_3.rotation.x = -19.6;
+
+				//CONES B
+				coneb_1.rotation.x = -20.2;
+				coneb_1.rotation.z = 0.4;
+				coneb_2.rotation.x = -19.8;
+				coneb_2.rotation.z = 0.4;
+				coneb_3.rotation.x = -19.5;
+				coneb_3.rotation.z = 0.4;
+
+				//CONES C
+				conec_1.rotation.x = -20.2;
+				conec_1.rotation.z = -0.4;
+				conec_2.rotation.x = -19.8;
+				conec_2.rotation.z = -0.4;
+				conec_3.rotation.x = -19.6;
+				conec_3.rotation.z = -0.4;
 
 				//CONE PIC
 
