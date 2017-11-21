@@ -36,7 +36,12 @@
 
 			//WALL 4
 			var top_wall4_1, top_wall4_2;
-
+			//WALL7
+			var wall7_fill;
+			//WALL8
+			var wall8_fill;
+			//WALL 9
+			var wall9_fill;
 			//TOUR 50,170
 			var plop_50170,plop_501702,plop_501703,plop_501704,plop_501705;
 			//TOUR 550,170
@@ -59,6 +64,9 @@
 			var coneb_1, coneb_2, coneb_3;
 			var conec_1, conec_2, conec_3;
 			var coned_1, coned_2, coned_3;
+
+			var conef_1, conef_2, conef_3;
+			var coneh_1, coneh_2, coneh_3;
 			var cone_pic;
 
 			//SOUS LE TOIT
@@ -807,6 +815,14 @@
 				wall7.position.z=875;
 				scene.add( wall7 );
 
+				var geometry = new THREE.BoxGeometry( 400, 310, 150 );
+				var material = new THREE.MeshBasicMaterial( {map :  beton } );
+				wall7_fill = new THREE.Mesh( geometry, material );
+				wall7_fill.position.x= -20;
+				wall7_fill.position.y= 100;
+				wall7_fill.position.z= 850;
+				scene.add( wall7_fill );	
+
 				//WALL 8
 				var geometry = new THREE.BoxGeometry( 400, 335, 80 );
 				var material = new THREE.MeshBasicMaterial( {map :  texture } );
@@ -816,6 +832,15 @@
 				wall8.position.z=875;
 				scene.add( wall8 );
 
+				var geometry = new THREE.BoxGeometry( 400, 310, 150 );
+				var material = new THREE.MeshBasicMaterial( {map :  beton } );
+				wall8_fill = new THREE.Mesh( geometry, material );
+				wall8_fill.position.x= 620;
+				wall8_fill.position.y= 100;
+				wall8_fill.position.z= 850;
+				scene.add( wall8_fill );	
+
+				//WALL 9
 				var geometry = new THREE.BoxGeometry( 400, 335, 80 );
 				var material = new THREE.MeshBasicMaterial( {map :  texture } );
 				wall9 = new THREE.Mesh( geometry, material );
@@ -823,6 +848,15 @@
 				wall9.position.y= 100;
 				wall9.position.z=1000;
 				scene.add( wall9 );	
+
+				var geometry = new THREE.BoxGeometry( 400, 310, 100 );
+				var material = new THREE.MeshBasicMaterial( {map :  beton } );
+				wall9_fill = new THREE.Mesh( geometry, material );
+				wall9_fill.position.x= 300;
+				wall9_fill.position.y= 100;
+				wall9_fill.position.z= 910;
+				scene.add( wall9_fill );	
+
 
 				//WALL 10
 				var geometry = new THREE.BoxGeometry( 80, 335, 200 );
@@ -936,7 +970,7 @@
 	                	var geometry = new THREE.ConeBufferGeometry( 25, 45, 30 );
 						var material = new THREE.MeshBasicMaterial( {map: gold} );
 						coned_1 = new THREE.Mesh( geometry, material );
-						coned_1.position.x = 140;
+						coned_1.position.x = 120;
 						coned_1.position.y = 440;
 						coned_1.position.z = 600;
 						scene.add( coned_1 );
@@ -945,7 +979,7 @@
 	                	var geometry = new THREE.ConeBufferGeometry( 25, 45, 30 );
 						var material = new THREE.MeshBasicMaterial( {map: gold} );
 						coned_2 = new THREE.Mesh( geometry, material );
-						coned_2.position.x = 170;
+						coned_2.position.x = 150;
 						coned_2.position.y = 500;
 						coned_2.position.z = 600;
 						scene.add( coned_2 );
@@ -967,6 +1001,63 @@
 						cone_pic.position.y = 572;
 						cone_pic.position.z = 600;
 						scene.add( cone_pic );
+
+
+						//CONES: F (1)
+	                	var geometry = new THREE.ConeBufferGeometry( 25, 45, 30 );
+						var material = new THREE.MeshBasicMaterial( {map: gold} );
+						conef_1 = new THREE.Mesh( geometry, material );
+						conef_1.position.x = 300;
+						conef_1.position.y = 440;
+						conef_1.position.z = 765;
+						scene.add( conef_1 );
+
+						//CONES: F (2)
+	                	var geometry = new THREE.ConeBufferGeometry( 25, 45, 30 );
+						var material = new THREE.MeshBasicMaterial( {map: gold} );
+						conef_2 = new THREE.Mesh( geometry, material );
+						conef_2.position.x = 300;
+						conef_2.position.y = 500;
+						conef_2.position.z = 735;
+						scene.add( conef_2 );
+
+						//CONES: F (3)
+	                	var geometry = new THREE.ConeBufferGeometry( 25, 45, 30 );
+						var material = new THREE.MeshBasicMaterial( {map: gold} );
+						conef_3 = new THREE.Mesh( geometry, material );
+						conef_3.position.x = 300;
+						conef_3.position.y = 540;
+						conef_3.position.z = 698;
+						scene.add( conef_3 );
+
+						//CONES: H (1)
+	                	var geometry = new THREE.ConeBufferGeometry( 25, 45, 30 );
+						var material = new THREE.MeshBasicMaterial( {map: gold} );
+						coneh_1 = new THREE.Mesh( geometry, material );
+						coneh_1.position.x = 450;
+						coneh_1.position.y = 440;
+						coneh_1.position.z = 600;
+						scene.add( coneh_1 );
+
+						//CONES: H (2)
+	                	var geometry = new THREE.ConeBufferGeometry( 25, 45, 30 );
+						var material = new THREE.MeshBasicMaterial( {map: gold} );
+						coneh_2 = new THREE.Mesh( geometry, material );
+						coneh_2.position.x = 450;
+						coneh_2.position.y = 500;
+						coneh_2.position.z = 600;
+						scene.add( coneh_2 );
+
+						//CONES: H (3)
+	                	var geometry = new THREE.ConeBufferGeometry( 25, 45, 30 );
+						var material = new THREE.MeshBasicMaterial( {map: gold} );
+						coneh_3 = new THREE.Mesh( geometry, material );
+						coneh_3.position.x = 450;
+						coneh_3.position.y = 540;
+						coneh_3.position.z = 600;
+						scene.add( coneh_3 );
+
+
 					
 				//SOUS LE TOIT
 
@@ -1049,7 +1140,9 @@
 				top_wall4_1.rotation.y = 1.9;
 				top_wall4_2.rotation.y = 1.9;
 				wall7.rotation.y= -0.9;
+				wall7_fill.rotation.y = -0.9;
 				wall8.rotation.y= -2.2;
+				wall8_fill.rotation.y = -2.2;
 				//wall9.rotation.y=1.6;
 				wall10.rotation.y = 2.15;
 				wall11.rotation.y = 0.95;
@@ -1098,11 +1191,27 @@
 
 				//CONES D
 				coned_1.rotation.x = -20.2;
-				coned_1.rotation.z = 45.3;
+				coned_1.rotation.z = 1.4;
 				coned_2.rotation.x = -19.8;
-				coned_2.rotation.z = 44.6;
+				coned_2.rotation.z = 1.4;
 				coned_3.rotation.x = -19.6;
-				coned_2.rotation.z = 45;
+				coned_3.rotation.z = 1.4;
+
+				//CONES F
+				conef_1.rotation.x = -20.6;
+				conef_1.rotation.z = 3;
+				conef_2.rotation.x = -20.93;
+				conef_2.rotation.z = 3;
+				conef_3.rotation.x = -2.45;
+				conef_3.rotation.z = 3;
+
+				//CONES H
+				coneh_1.rotation.x = -20.2;
+				coneh_1.rotation.z = -1.4;
+				coneh_2.rotation.x = -19.8;
+				coneh_2.rotation.z = -1.4;
+				coneh_3.rotation.x = -19.6;
+				coneh_3.rotation.z = -1.4;
 
 				//CONE PIC
 
