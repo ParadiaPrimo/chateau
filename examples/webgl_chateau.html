@@ -28,6 +28,7 @@
 			//WALL 1
 			var top_wall, top_wall2;
 			var bloc_wall, bloc_wall2, bloc_wall3, bloc_wall4, bloc_wall5, bloc_wall6;
+			var mini_wall1,mini_wall2;
 			var wall_fill;
 
 			//WALL 2
@@ -507,6 +508,16 @@
 					roof_550170.position.y = 520;
 					roof_550170.position.z = 350;
 					scene.add( roof_550170 );
+					
+					var geometry = new THREE.BoxGeometry( 110, 100,80 );
+					var material = new THREE.MeshBasicMaterial( {map : texture2} );
+					mini_wall1 = new THREE.Mesh( geometry, material );
+					mini_wall1.position.x=-200;
+					mini_wall1.position.y=0;
+					mini_wall1.position.z=350;
+					scene.add( mini_wall1 );
+					
+					
 				//TOUR -280, 750
 				var geometry = new THREE.CylinderGeometry( 100, 100, 500, 100 );
 				var material = new THREE.MeshBasicMaterial( {map :  texture } );
@@ -606,6 +617,15 @@
 					roof_550170.position.y = 520;
 					roof_550170.position.z = 350;
 					scene.add( roof_550170 );
+					
+					var geometry = new THREE.BoxGeometry( 110, 100,80 );
+					var material = new THREE.MeshBasicMaterial( {map : texture2} );
+					mini_wall1 = new THREE.Mesh( geometry, material );
+					mini_wall1.position.x=800;
+					mini_wall1.position.y=0;
+					mini_wall1.position.z=350;
+					scene.add( mini_wall1 );
+					
 				
 				/*var geometry = new THREE.CylinderGeometry( 50, 50, 200, 60 );
 				var material = new THREE.MeshBasicMaterial( {color :  0xffffff } );
@@ -762,12 +782,12 @@
 				wall3.position.z=160;
 				scene.add( wall3 );
 
-					var geometry = new THREE.BoxGeometry( 23, 15, 320 );
-					var material = new THREE.MeshBasicMaterial( {color : 0xff0000 } );
+					var geometry = new THREE.BoxGeometry( 23, 15, 310 );
+					var material = new THREE.MeshBasicMaterial( {map : texture2} );
 					top_wall3_1 = new THREE.Mesh( geometry, material );
 					top_wall3_1.position.x=-420;
 					top_wall3_1.position.y=55;
-					top_wall3_1.position.z=100;
+					top_wall3_1.position.z=210;
 					scene.add( top_wall3_1 );
 
 					var geometry = new THREE.BoxGeometry( 23, 15, 320 );
@@ -775,7 +795,7 @@
 					top_wall3_2 = new THREE.Mesh( geometry, material );
 					top_wall3_2.position.x=-390;
 					top_wall3_2.position.y= 55;
-					top_wall3_2.position.z= 125;
+					top_wall3_2.position.z= 115;
 					scene.add( top_wall3_2 );
 
 				//WALL 4
@@ -788,19 +808,19 @@
 				scene.add( wall4 );	
 				
 				var geometry = new THREE.BoxGeometry( 23, 15, 320 );
-					var material = new THREE.MeshBasicMaterial( {color : 0xff0000 } );
+					var material = new THREE.MeshBasicMaterial( {map : texture2 } );
 					top_wall4_1 = new THREE.Mesh( geometry, material );
 					top_wall4_1.position.x= 1020;
 					top_wall4_1.position.y=55;
-					top_wall4_1.position.z= 160;
+					top_wall4_1.position.z= 210;
 					scene.add( top_wall4_1 );
 
 					var geometry = new THREE.BoxGeometry( 23, 15, 320 );
-					var material = new THREE.MeshBasicMaterial( {color : 0xff0000} );
+					var material = new THREE.MeshBasicMaterial( {map : texture2} );
 					top_wall4_2 = new THREE.Mesh( geometry, material );
 					top_wall4_2.position.x=1020;
 					top_wall4_2.position.y= 55;
-					top_wall4_2.position.z= 115;
+					top_wall4_2.position.z= 105;
 					scene.add( top_wall4_2 );
 				
 				
