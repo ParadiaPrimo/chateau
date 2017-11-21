@@ -48,6 +48,8 @@
 			//TOUR 550, 100
 			var roof_550100;
 
+			//TOUR -280, 750
+			var roof_280750;
 			//MUR PRINCIPAL: PORTE
 			var mainwall;
 
@@ -59,6 +61,7 @@
 
 			//SOUS LE TOIT
 			var subwall1, subwall2, subwall3;
+			var subroof;
 
 			init();
 			animate();
@@ -473,28 +476,36 @@
 					roof_550170.position.y = 520;
 					roof_550170.position.z = 350;
 					scene.add( roof_550170 );
-				
-				var geometry = new THREE.CylinderGeometry( 50, 50, 200, 60 );
-				var material = new THREE.MeshBasicMaterial( {color :  0xffffff } );
+				//TOUR -280, 750
+				var geometry = new THREE.CylinderGeometry( 100, 100, 500, 100 );
+				var material = new THREE.MeshBasicMaterial( {map :  texture } );
 				tower = new THREE.Mesh( geometry, material );
 				tower.position.x=-280;
-				tower.position.y=0;
+				tower.position.y= 155;
 				tower.position.z=750;
 				scene.add( tower );
-				var geometry = new THREE.CylinderGeometry( 55, 55, 60, 60 );
-				var material = new THREE.MeshBasicMaterial( {color :  0xff0000 } );
+				var geometry = new THREE.CylinderGeometry( 110, 110, 20, 20, 30 );
+				var material = new THREE.MeshBasicMaterial( {map :  texture } );
 				towerup= new THREE.Mesh( geometry, material );
 				towerup.position.x=-280;
-				towerup.position.y=80;
+				towerup.position.y= 434;
 				towerup.position.z=750;
 				scene.add( towerup );
-				var geometry = new THREE.CylinderGeometry( 1, 60, 40, 60 );
-				var material = new THREE.MeshBasicMaterial( {color :  0xffffff } );
+				var geometry = new THREE.CylinderGeometry( 110, 100, 30, 60, 30 );
+				var material = new THREE.MeshBasicMaterial( {map :  texture2 } );
 				toptower = new THREE.Mesh( geometry, material );
 				toptower.position.x=-280;
-				toptower.position.y=130;
+				toptower.position.y=419;
 				toptower.position.z=750;
 				scene.add( toptower );	
+
+				var geometry = new THREE.ConeBufferGeometry( 90, 100, 100 );
+					var material = new THREE.MeshBasicMaterial( {map: roof} );
+					roof_280750 = new THREE.Mesh( geometry, material );
+					roof_280750.position.x = -150;
+					roof_280750.position.y = 520;
+					roof_280750.position.z = 350;
+					scene.add( roof_280750 );
 				//TOUR 50, 1000
 					var geometry = new THREE.CylinderGeometry( 100, 100, 500, 100 );
 					var material = new THREE.MeshBasicMaterial( {map :  texture } );
@@ -512,7 +523,7 @@
 					roof_501000.position.z = 1000;
 					scene.add( roof_501000 );
 
-				var geometry = new THREE.CylinderGeometry( 50, 50, 200, 60 );
+				/*var geometry = new THREE.CylinderGeometry( 50, 50, 200, 60 );
 				var material = new THREE.MeshBasicMaterial( {color :  0xffffff } );
 				tower = new THREE.Mesh( geometry, material );
 				tower.position.x=0;
@@ -532,7 +543,7 @@
 				toptower.position.x=0;
 				toptower.position.y=130;
 				toptower.position.z=700;
-				scene.add( toptower );
+				scene.add( toptower );*/
 				
 				//TOUR 750, 350
 					var geometry = new THREE.CylinderGeometry( 100, 100, 500, 100 );
@@ -565,7 +576,7 @@
 					roof_550170.position.z = 350;
 					scene.add( roof_550170 );
 				
-				var geometry = new THREE.CylinderGeometry( 50, 50, 200, 60 );
+				/*var geometry = new THREE.CylinderGeometry( 50, 50, 200, 60 );
 				var material = new THREE.MeshBasicMaterial( {color :  0xffffff } );
 				tower = new THREE.Mesh( geometry, material );
 				tower.position.x=600;
@@ -585,7 +596,7 @@
 				toptower.position.x=600;
 				toptower.position.y=130;
 				toptower.position.z=700;
-				scene.add( toptower );
+				scene.add( toptower );*/
 				
 				//TOUR 550, 1000
 					var geometry = new THREE.CylinderGeometry( 100, 100, 500, 100 );
@@ -604,26 +615,26 @@
 					roof_501000.position.z = 1000;
 					scene.add( roof_501000 );
 
-				
-				var geometry = new THREE.CylinderGeometry( 50, 50, 200, 60 );
-				var material = new THREE.MeshBasicMaterial( {color :  0xffffff } );
+				//TOUR 880, 750
+				var geometry = new THREE.CylinderGeometry( 100, 100, 500, 100 );
+				var material = new THREE.MeshBasicMaterial( {map :  texture } );
 				tower = new THREE.Mesh( geometry, material );
 				tower.position.x=880;
-				tower.position.y=0;
+				tower.position.y=155;
 				tower.position.z=750;
 				scene.add( tower );
-				var geometry = new THREE.CylinderGeometry( 55, 55, 60, 60 );
-				var material = new THREE.MeshBasicMaterial( {color :  0xff0000 } );
+				var geometry = new THREE.CylinderGeometry( 110, 110, 20, 20, 30 );
+				var material = new THREE.MeshBasicMaterial( {map :  texture } );
 				towerup = new THREE.Mesh( geometry, material );
 				towerup.position.x=880;
-				towerup.position.y=80;
+				towerup.position.y=434;
 				towerup.position.z=750;
 				scene.add( towerup );
-				var geometry = new THREE.CylinderGeometry( 1, 60, 40, 60 );
-				var material = new THREE.MeshBasicMaterial( {color :  0xffffff } );
+				var geometry = new THREE.CylinderGeometry( 110, 100, 30, 60, 30 );
+				var material = new THREE.MeshBasicMaterial( {map :  texture2 } );
 				toptower = new THREE.Mesh( geometry, material );
 				toptower.position.x=880;
-				toptower.position.y=130;
+				toptower.position.y=419;
 				toptower.position.z=750;
 				scene.add( toptower );
 				
@@ -744,35 +755,37 @@
 					top_wall4_2.position.z= 115;
 					scene.add( top_wall4_2 );
 				
-				var geometry = new THREE.BoxGeometry( 40, 150, 550 );
-				var material = new THREE.MeshBasicMaterial( {color :  0xf00000 } );
+				var geometry = new THREE.BoxGeometry( 80, 150, 550 );
+				var material = new THREE.MeshBasicMaterial( {map :  texture } );
 				wall5 = new THREE.Mesh( geometry, material );
 				wall5.position.x=-290;
 				wall5.position.y=-25;
 				wall5.position.z=500;
 				scene.add( wall5 );	
 				
-				var geometry = new THREE.BoxGeometry( 40, 150, 550 );
-				var material = new THREE.MeshBasicMaterial( {color :  0xf00000 } );
+				var geometry = new THREE.BoxGeometry( 80, 150, 550 );
+				var material = new THREE.MeshBasicMaterial( {map :  texture } );
 				wall6 = new THREE.Mesh( geometry, material );
 				wall6.position.x=890;
 				wall6.position.y=-25;
 				wall6.position.z=500;
 				scene.add( wall6 );	
 				
-				var geometry = new THREE.BoxGeometry( 40, 150, 350 );
-				var material = new THREE.MeshBasicMaterial( {color :  0xf00000 } );
+				//WALL 7
+				var geometry = new THREE.BoxGeometry( 400, 335, 80 );
+				var material = new THREE.MeshBasicMaterial( {map :  texture } );
 				wall7 = new THREE.Mesh( geometry, material );
 				wall7.position.x=-125;
-				wall7.position.y=-25;
+				wall7.position.y= 100;
 				wall7.position.z=875;
 				scene.add( wall7 );
 
-				var geometry = new THREE.BoxGeometry( 40, 150, 350 );
-				var material = new THREE.MeshBasicMaterial( {color :  0xf00000 } );
+				//WALL 8
+				var geometry = new THREE.BoxGeometry( 400, 335, 80 );
+				var material = new THREE.MeshBasicMaterial( {map :  texture } );
 				wall8 = new THREE.Mesh( geometry, material );
 				wall8.position.x=725;
-				wall8.position.y=-25;
+				wall8.position.y= 100;
 				wall8.position.z=875;
 				scene.add( wall8 );
 
@@ -929,6 +942,15 @@
 						scene.add( cone_pic );
 					
 				//SOUS LE TOIT
+
+				var geometry = new THREE.CylinderGeometry( 150, 150, 140, 100 );
+				var material = new THREE.MeshBasicMaterial( {map :  texture2 } );
+				subroof = new THREE.Mesh( geometry, material );
+				subroof.position.x=300;
+				subroof.position.y=330;
+				subroof.position.z=600;
+				scene.add( subroof );
+
 				var geometry = new THREE.BoxGeometry(700, 310, 630);
 				var material = new THREE.MeshBasicMaterial( {map : beton} );
 				subwall1 = new THREE.Mesh( geometry, material );
@@ -997,8 +1019,8 @@
 				wall4.rotation.y=1.9;
 				top_wall4_1.rotation.y = 1.9;
 				top_wall4_2.rotation.y = 1.9;
-				wall7.rotation.y=0.9;
-				wall8.rotation.y=2.2;
+				wall7.rotation.y= -0.9;
+				wall8.rotation.y= -2.2;
 				//wall9.rotation.y=1.6;
 				wall10.rotation.y = 2.15;
 				wall11.rotation.y = 0.95;
