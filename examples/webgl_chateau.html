@@ -22,6 +22,9 @@
 			var towerup,tower,toptower,mesh;
 			var wall,wall2,wall3,wall4,wall5,wall6,wall7,wall8,wall9,wall10,wall11,wall12,wall13,wall14;
 			
+			//PORTE
+			var door;
+			
 			//WALL 1
 			var top_wall, top_wall2;
 			var bloc_wall, bloc_wall2, bloc_wall3, bloc_wall4, bloc_wall5, bloc_wall6;
@@ -84,7 +87,8 @@
 			
 				controls.update();
 				scene = new THREE.Scene();
-
+				
+				var textdoor = new THREE.TextureLoader().load('textures/Bowser_door.jpg');
 				var texture = new THREE.TextureLoader().load( 'textures/brick-wall-2.jpg' );
 				var texture2 = new THREE.TextureLoader().load( 'textures/brique3.jpg' );
 				var roof = new THREE.TextureLoader().load( 'textures/roof.png' );
@@ -112,7 +116,16 @@
 				toptower.position.y=138;
 				toptower.position.z=0;
 				scene.add( toptower );
-
+				
+				//PORTE
+					var geometry = new THREE.BoxGeometry(350, 330, 50);
+					var material = new THREE.MeshBasicMaterial( {map :  textdoor } );
+					door = new THREE.Mesh( geometry, material );
+					door.position.x=300;
+					door.position.y=100;
+					door.position.z=104;
+					scene.add( door );
+				
 				//TOUR 600, 0
 					var geometry = new THREE.CylinderGeometry( 50, 50, 200, 60 );
 					var material = new THREE.MeshBasicMaterial( {map :  texture } );
