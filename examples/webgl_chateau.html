@@ -687,15 +687,15 @@
 					scene.add( top_wall );
 
 					var geometry = new THREE.BoxGeometry( 23, 15, 320 );
-					var material = new THREE.MeshBasicMaterial( {map :  texture2 } );
+					var material = new THREE.MeshBasicMaterial( {map : texture2} );
 					top_wall2 = new THREE.Mesh( geometry, material );
 					top_wall2.position.x=-130;
 					top_wall2.position.y= 55;
 					top_wall2.position.z= 115;
 					scene.add( top_wall2 );
 
-					var geometry = new THREE.BoxGeometry( 70, 310, 200 );
-					var material = new THREE.MeshBasicMaterial( {map :  beton } );
+					var geometry = new THREE.BoxGeometry( 90, 310, 220 );
+					var material = new THREE.MeshBasicMaterial( {map : beton } );
 					wall_fill = new THREE.Mesh( geometry, material );
 					wall_fill.position.x= 20;
 					wall_fill.position.y= 100;
@@ -738,14 +738,14 @@
 					scene.add( top_wall2_1 );
 
 					var geometry = new THREE.BoxGeometry( 23, 15, 320 );
-					var material = new THREE.MeshBasicMaterial( {map :  texture2 } );
+					var material = new THREE.MeshBasicMaterial( {map : texture2} );
 					top_wall2_2 = new THREE.Mesh( geometry, material );
 					top_wall2_2.position.x= 750;
 					top_wall2_2.position.y= 55;
 					top_wall2_2.position.z= 148;
 					scene.add( top_wall2_2 );
 
-					var geometry = new THREE.BoxGeometry( 70, 310, 170 );
+					var geometry = new THREE.BoxGeometry( 90, 310, 170 );
 					var material = new THREE.MeshBasicMaterial( {map :  beton } );
 					wall2_fill = new THREE.Mesh( geometry, material );
 					wall2_fill.position.x= 560;
@@ -763,7 +763,7 @@
 				scene.add( wall3 );
 
 					var geometry = new THREE.BoxGeometry( 23, 15, 320 );
-					var material = new THREE.MeshBasicMaterial( {map :  texture2 } );
+					var material = new THREE.MeshBasicMaterial( {color : 0xff0000 } );
 					top_wall3_1 = new THREE.Mesh( geometry, material );
 					top_wall3_1.position.x=-420;
 					top_wall3_1.position.y=55;
@@ -771,7 +771,7 @@
 					scene.add( top_wall3_1 );
 
 					var geometry = new THREE.BoxGeometry( 23, 15, 320 );
-					var material = new THREE.MeshBasicMaterial( {map :  texture2 } );
+					var material = new THREE.MeshBasicMaterial( {map : texture2} );
 					top_wall3_2 = new THREE.Mesh( geometry, material );
 					top_wall3_2.position.x=-390;
 					top_wall3_2.position.y= 55;
@@ -788,7 +788,7 @@
 				scene.add( wall4 );	
 				
 				var geometry = new THREE.BoxGeometry( 23, 15, 320 );
-					var material = new THREE.MeshBasicMaterial( {map :  texture2 } );
+					var material = new THREE.MeshBasicMaterial( {color : 0xff0000 } );
 					top_wall4_1 = new THREE.Mesh( geometry, material );
 					top_wall4_1.position.x= 1020;
 					top_wall4_1.position.y=55;
@@ -796,9 +796,9 @@
 					scene.add( top_wall4_1 );
 
 					var geometry = new THREE.BoxGeometry( 23, 15, 320 );
-					var material = new THREE.MeshBasicMaterial( {map :  texture2 } );
+					var material = new THREE.MeshBasicMaterial( {color : 0xff0000} );
 					top_wall4_2 = new THREE.Mesh( geometry, material );
-					top_wall4_2.position.x=-390;
+					top_wall4_2.position.x=1020;
 					top_wall4_2.position.y= 55;
 					top_wall4_2.position.z= 115;
 					scene.add( top_wall4_2 );
@@ -823,11 +823,11 @@
 				scene.add( wall6 );	
 				
 				//WALL 7
-				var geometry = new THREE.BoxGeometry( 400, 335, 80 );
+				var geometry = new THREE.BoxGeometry( 400, 360, 80 );
 				var material = new THREE.MeshBasicMaterial( {map :  texture } );
 				wall7 = new THREE.Mesh( geometry, material );
 				wall7.position.x=-125;
-				wall7.position.y= 100;
+				wall7.position.y= 80;
 				wall7.position.z=875;
 				scene.add( wall7 );
 
@@ -840,11 +840,11 @@
 				scene.add( wall7_fill );	
 
 				//WALL 8
-				var geometry = new THREE.BoxGeometry( 400, 335, 80 );
-				var material = new THREE.MeshBasicMaterial( {map :  texture } );
+				var geometry = new THREE.BoxGeometry( 400, 360, 80 );
+				var material = new THREE.MeshBasicMaterial( {map : texture} );
 				wall8 = new THREE.Mesh( geometry, material );
 				wall8.position.x=725;
-				wall8.position.y= 100;
+				wall8.position.y=80;
 				wall8.position.z=875;
 				scene.add( wall8 );
 
@@ -857,11 +857,11 @@
 				scene.add( wall8_fill );	
 
 				//WALL 9
-				var geometry = new THREE.BoxGeometry( 400, 335, 80 );
-				var material = new THREE.MeshBasicMaterial( {map :  texture } );
+				var geometry = new THREE.BoxGeometry( 400, 360, 80 );
+				var material = new THREE.MeshBasicMaterial( {map : texture} );
 				wall9 = new THREE.Mesh( geometry, material );
 				wall9.position.x=300;
-				wall9.position.y= 100;
+				wall9.position.y= 80;
 				wall9.position.z=1000;
 				scene.add( wall9 );	
 
@@ -1155,13 +1155,13 @@
 				wall4.rotation.y=1.9;
 				top_wall4_1.rotation.y = 1.9;
 				top_wall4_2.rotation.y = 1.9;
-				wall7.rotation.y= -0.9;
-				wall7_fill.rotation.y = -0.9;
-				wall8.rotation.y= -2.2;
-				wall8_fill.rotation.y = -2.2;
+				wall7.rotation.y= -0.5;
+				wall7_fill.rotation.y = -0.5;
+				wall8.rotation.y= -2.5;
+				wall8_fill.rotation.y = -2.5;
 				//wall9.rotation.y=1.6;
-				wall10.rotation.y = 2.15;
-				wall11.rotation.y = 0.95;
+				wall10.rotation.y = 2.35;
+				wall11.rotation.y = 0.75;
 				plop.rotation.y=1.5;
 				plop2.rotation.y=0.3;
 				plop3.rotation.y=2;
