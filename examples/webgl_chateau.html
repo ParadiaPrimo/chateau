@@ -30,6 +30,12 @@
 			var top_wall2_1, top_wall2_2;
 			var plop,plop2,plop3,plop4,plop5,plop6,plop7,plop8,plop9,plop10;
 
+			//WALL 3
+			var top_wall3_1, top_wall3_2;
+
+			//WALL 4
+			var top_wall4_1, top_wall4_2;
+
 			//TOUR 50,170
 			var plop_50170,plop_501702,plop_501703,plop_501704,plop_501705;
 			//TOUR 550,170
@@ -48,7 +54,11 @@
 			//TOIT PRINCIPAL
 			var coneb_1, coneb_2, coneb_3;
 			var conec_1, conec_2, conec_3;
+			var coned_1, coned_2, coned_3;
 			var cone_pic;
+
+			//SOUS LE TOIT
+			var subwall1, subwall2, subwall3;
 
 			init();
 			animate();
@@ -66,6 +76,7 @@
 				var texture2 = new THREE.TextureLoader().load( 'textures/brique3.jpg' );
 				var roof = new THREE.TextureLoader().load( 'textures/roof.png' );
 				var gold = new THREE.TextureLoader().load('textures/or.jpg');
+				var beton = new THREE.TextureLoader().load('textures/beton.jpg');
 
 				var geometry = new THREE.CylinderGeometry( 50, 50, 200, 60 );
 				var material = new THREE.MeshBasicMaterial( {map :  texture } );
@@ -143,7 +154,7 @@
 				tower.position.y=20;
 				tower.position.z=100;
 				scene.add( tower );
-				var geometry = new THREE.CylinderGeometry( 100, 100, 20, 20,30 );
+				var geometry = new THREE.CylinderGeometry( 100, 100, 20, 20, 30 );
 				var material = new THREE.MeshBasicMaterial( {map : texture } );
 				towerup = new THREE.Mesh( geometry, material );
 				towerup.position.x=1200;
@@ -683,23 +694,55 @@
 					top_wall2_2.position.z= 148;
 					scene.add( top_wall2_2 );
 
-				
-				var geometry = new THREE.BoxGeometry( 40, 150, 300 );
-				var material = new THREE.MeshBasicMaterial( {color :  0xf00000 } );
+				// WALL 3
+				var geometry = new THREE.BoxGeometry( 120, 150, 300 );
+				var material = new THREE.MeshBasicMaterial( {map :  texture } );
 				wall3 = new THREE.Mesh( geometry, material );
 				wall3.position.x=-420;
 				wall3.position.y=-25;
-				wall3.position.z=150;
+				wall3.position.z=160;
 				scene.add( wall3 );
 
-				var geometry = new THREE.BoxGeometry( 40, 150, 300 );
-				var material = new THREE.MeshBasicMaterial( {color :  0xf00000 } );
+					var geometry = new THREE.BoxGeometry( 23, 15, 320 );
+					var material = new THREE.MeshBasicMaterial( {map :  texture2 } );
+					top_wall3_1 = new THREE.Mesh( geometry, material );
+					top_wall3_1.position.x=-420;
+					top_wall3_1.position.y=55;
+					top_wall3_1.position.z=100;
+					scene.add( top_wall3_1 );
+
+					var geometry = new THREE.BoxGeometry( 23, 15, 320 );
+					var material = new THREE.MeshBasicMaterial( {map :  texture2 } );
+					top_wall3_2 = new THREE.Mesh( geometry, material );
+					top_wall3_2.position.x=-390;
+					top_wall3_2.position.y= 55;
+					top_wall3_2.position.z= 125;
+					scene.add( top_wall3_2 );
+
+				//WALL 4
+				var geometry = new THREE.BoxGeometry( 120, 150, 300 );
+				var material = new THREE.MeshBasicMaterial( {map :  texture } );
 				wall4 = new THREE.Mesh( geometry, material );
 				wall4.position.x=1020;
 				wall4.position.y=-25;
-				wall4.position.z=150;
+				wall4.position.z=160;
 				scene.add( wall4 );	
 				
+				var geometry = new THREE.BoxGeometry( 23, 15, 320 );
+					var material = new THREE.MeshBasicMaterial( {map :  texture2 } );
+					top_wall4_1 = new THREE.Mesh( geometry, material );
+					top_wall4_1.position.x= 1020;
+					top_wall4_1.position.y=55;
+					top_wall4_1.position.z= 160;
+					scene.add( top_wall4_1 );
+
+					var geometry = new THREE.BoxGeometry( 23, 15, 320 );
+					var material = new THREE.MeshBasicMaterial( {map :  texture2 } );
+					top_wall4_2 = new THREE.Mesh( geometry, material );
+					top_wall4_2.position.x=-390;
+					top_wall4_2.position.y= 55;
+					top_wall4_2.position.z= 115;
+					scene.add( top_wall4_2 );
 				
 				var geometry = new THREE.BoxGeometry( 40, 150, 550 );
 				var material = new THREE.MeshBasicMaterial( {color :  0xf00000 } );
@@ -733,11 +776,11 @@
 				wall8.position.z=875;
 				scene.add( wall8 );
 
-				var geometry = new THREE.BoxGeometry( 40, 150, 550 );
-				var material = new THREE.MeshBasicMaterial( {color :  0xf00000 } );
+				var geometry = new THREE.BoxGeometry( 400, 335, 80 );
+				var material = new THREE.MeshBasicMaterial( {map :  texture } );
 				wall9 = new THREE.Mesh( geometry, material );
 				wall9.position.x=300;
-				wall9.position.y=-25;
+				wall9.position.y= 100;
 				wall9.position.z=1000;
 				scene.add( wall9 );	
 
@@ -849,6 +892,33 @@
 						conec_3.position.z = 540;
 						scene.add( conec_3 );
 
+						//CONES: D (1)
+	                	var geometry = new THREE.ConeBufferGeometry( 25, 45, 30 );
+						var material = new THREE.MeshBasicMaterial( {map: gold} );
+						coned_1 = new THREE.Mesh( geometry, material );
+						coned_1.position.x = 140;
+						coned_1.position.y = 440;
+						coned_1.position.z = 600;
+						scene.add( coned_1 );
+
+						//CONES: D (2)
+	                	var geometry = new THREE.ConeBufferGeometry( 25, 45, 30 );
+						var material = new THREE.MeshBasicMaterial( {map: gold} );
+						coned_2 = new THREE.Mesh( geometry, material );
+						coned_2.position.x = 170;
+						coned_2.position.y = 500;
+						coned_2.position.z = 600;
+						scene.add( coned_2 );
+
+						//CONES: D (3)
+	                	var geometry = new THREE.ConeBufferGeometry( 25, 45, 30 );
+						var material = new THREE.MeshBasicMaterial( {map: gold} );
+						coned_3 = new THREE.Mesh( geometry, material );
+						coned_3.position.x = 180;
+						coned_3.position.y = 540;
+						coned_3.position.z = 600;
+						scene.add( coned_3 );
+
 						//CONE PIC
 	                	var geometry = new THREE.ConeBufferGeometry( 30,45, 40);
 						var material = new THREE.MeshBasicMaterial( {map: gold} );
@@ -858,7 +928,31 @@
 						cone_pic.position.z = 600;
 						scene.add( cone_pic );
 					
-					
+				//SOUS LE TOIT
+				var geometry = new THREE.BoxGeometry(700, 310, 630);
+				var material = new THREE.MeshBasicMaterial( {map : beton} );
+				subwall1 = new THREE.Mesh( geometry, material );
+				subwall1.position.x= 300;
+				subwall1.position.y= 100;
+				subwall1.position.z= 570;
+				scene.add( subwall1 );
+
+				/*var geometry = new THREE.BoxGeometry(500, 200, 200);
+				var material = new THREE.MeshBasicMaterial( {map : gold} );
+				subwall2 = new THREE.Mesh( geometry, material );
+				subwall2.position.x= 300;
+				subwall2.position.y= 600;
+				subwall2.position.z= 600;
+				scene.add( subwall2 );
+
+				var geometry = new THREE.BoxGeometry(500, 200, 200);
+				var material = new THREE.MeshBasicMaterial( {map : gold} );
+				subwall3 = new THREE.Mesh( geometry, material );
+				subwall3.position.x= 300;
+				subwall3.position.y= 600;
+				subwall3.position.z= 600;
+				scene.add( subwall3 );*/
+
 				renderer = new THREE.WebGLRenderer();
 				renderer.setPixelRatio( window.devicePixelRatio );
 				renderer.setSize( window.innerWidth, window.innerHeight );
@@ -894,11 +988,18 @@
 				top_wall2_1.rotation.y = 0.95;
 				top_wall2_2.rotation.y = 0.95;
 
+				//WALL 3
 				wall3.rotation.y=1.25;
+				top_wall3_1.rotation.y = 1.25;
+				top_wall3_2.rotation.y = 1.25;
+
+				//WALL 4
 				wall4.rotation.y=1.9;
+				top_wall4_1.rotation.y = 1.9;
+				top_wall4_2.rotation.y = 1.9;
 				wall7.rotation.y=0.9;
 				wall8.rotation.y=2.2;
-				wall9.rotation.y=1.6;
+				//wall9.rotation.y=1.6;
 				wall10.rotation.y = 2.15;
 				wall11.rotation.y = 0.95;
 				plop.rotation.y=1.5;
@@ -911,6 +1012,7 @@
 				plop7.rotation.y=2.5;
 				plop10.rotation.y=0.7;
 				plop9.rotation.y=2.5;
+
 				//PLOPS DE LA TOUR 50, 170
 				plop_501702.rotation.y = 0.7;
 				plop_501703.rotation.y = 1.9;
@@ -942,6 +1044,14 @@
 				conec_2.rotation.z = -0.4;
 				conec_3.rotation.x = -19.6;
 				conec_3.rotation.z = -0.4;
+
+				//CONES D
+				coned_1.rotation.x = -20.2;
+				coned_1.rotation.z = 45.3;
+				coned_2.rotation.x = -19.8;
+				coned_2.rotation.z = 44.6;
+				coned_3.rotation.x = -19.6;
+				coned_2.rotation.z = 45;
 
 				//CONE PIC
 
