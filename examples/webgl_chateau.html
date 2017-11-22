@@ -30,6 +30,8 @@
 			var bloc_wall, bloc_wall2, bloc_wall3, bloc_wall4, bloc_wall5, bloc_wall6;
 			var mini_wall1,mini_wall2;
 			var wall_fill;
+			var wall_left,wall_right;
+			var wall_left_fill,wall_right_fill;
 
 			//WALL 2
 			var top_wall2_1, top_wall2_2;
@@ -37,7 +39,6 @@
 			var wall2_fill;
 			//WALL 3
 			var top_wall3_1, top_wall3_2;
-
 			//WALL 4
 			var top_wall4_1, top_wall4_2;
 			//WALL7
@@ -476,6 +477,38 @@
 					mainwall.position.z= 190;
 					scene.add( mainwall );
 
+					var geometry = new THREE.BoxGeometry( 300, 320, 400);
+					var material = new THREE.MeshBasicMaterial( {map: beton} );
+					wall_left_fill = new THREE.Mesh( geometry, material );
+					wall_left_fill.position.x= -100;
+					wall_left_fill.position.y= 100;
+					wall_left_fill.position.z= 560;
+					scene.add( wall_left_fill );
+					
+					var geometry = new THREE.BoxGeometry( 20, 320, 400);
+					var material = new THREE.MeshBasicMaterial( {map : texture} );
+					wall_left = new THREE.Mesh( geometry, material );
+					wall_left.position.x= -245;
+					wall_left.position.y= 100;
+					wall_left.position.z= 560;
+					scene.add( wall_left );
+					
+					var geometry = new THREE.BoxGeometry( 300, 320, 400);
+					var material = new THREE.MeshBasicMaterial( {map: beton} );
+					wall_right_fill = new THREE.Mesh( geometry, material );
+					wall_right_fill.position.x= 700;
+					wall_right_fill.position.y= 100;
+					wall_right_fill.position.z= 560;
+					scene.add( wall_right_fill );
+					
+					var geometry = new THREE.BoxGeometry( 20, 320, 400);
+					var material = new THREE.MeshBasicMaterial( {map : texture} );
+					wall_right = new THREE.Mesh( geometry, material );
+					wall_right.position.x= 845;
+					wall_right.position.y= 100;
+					wall_right.position.z= 560;
+					scene.add( wall_right );
+					
 				//TOUR -150, 350
 					var geometry = new THREE.CylinderGeometry( 100, 100, 500, 100 );
 					var material = new THREE.MeshBasicMaterial( {map : texture } );
