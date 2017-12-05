@@ -69,8 +69,9 @@
 			var coneb_1, coneb_2, coneb_3;
 			var conec_1, conec_2, conec_3;
 			var coned_1, coned_2, coned_3;
-
+			var conee_1, conee_2, conee_3;
 			var conef_1, conef_2, conef_3;
+			var coneg_1, coneg_2, coneg_3;
 			var coneh_1, coneh_2, coneh_3;
 			var cone_pic;
 
@@ -1039,7 +1040,7 @@
 	                	var geometry = new THREE.ConeBufferGeometry( 25, 45, 30 );
 						var material = new THREE.MeshBasicMaterial( {map: gold} );
 						coned_1 = new THREE.Mesh( geometry, material );
-						coned_1.position.x = 120;
+						coned_1.position.x = 135;
 						coned_1.position.y = 440;
 						coned_1.position.z = 600;
 						scene.add( coned_1 );
@@ -1071,6 +1072,32 @@
 						cone_pic.position.z = 600;
 						scene.add( cone_pic );
 
+						//CONES: E (1)
+	                	var geometry = new THREE.ConeBufferGeometry( 25, 45, 30 );
+						var material = new THREE.MeshBasicMaterial( {map: gold} );
+						conee_1 = new THREE.Mesh( geometry, material );
+						conee_1.position.x = 200;
+						conee_1.position.y = 440;
+						conee_1.position.z = 680;
+						scene.add( conee_1 );
+
+						//CONES: E (2)
+	                	var geometry = new THREE.ConeBufferGeometry( 25, 45, 30 );
+						var material = new THREE.MeshBasicMaterial( {map: gold} );
+						conee_2 = new THREE.Mesh( geometry, material );
+						conee_2.position.x = 200;
+						conee_2.position.y = 500;
+						conee_2.position.z = 680;
+						scene.add( conee_2 );
+
+						//CONES: E (3)
+	                	var geometry = new THREE.ConeBufferGeometry( 25, 45, 30 );
+						var material = new THREE.MeshBasicMaterial( {map: gold} );
+						conee_3 = new THREE.Mesh( geometry, material );
+						conee_3.position.x = 200;
+						conee_3.position.y = 540;
+						conee_3.position.z = 680;
+						scene.add( conee_3 );
 
 						//CONES: F (1)
 	                	var geometry = new THREE.ConeBufferGeometry( 25, 45, 30 );
@@ -1099,11 +1126,38 @@
 						conef_3.position.z = 698;
 						scene.add( conef_3 );
 
+						//CONES: G (1)
+	                	var geometry = new THREE.ConeBufferGeometry( 25, 45, 30 );
+						var material = new THREE.MeshBasicMaterial( {map: gold} );
+						coneg_1 = new THREE.Mesh( geometry, material );
+						coneg_1.position.x = 420;
+						coneg_1.position.y = 440;
+						coneg_1.position.z = 745;
+						scene.add( coneg_1 );
+
+						//CONES: G (2)
+	                	var geometry = new THREE.ConeBufferGeometry( 25, 45, 30 );
+						var material = new THREE.MeshBasicMaterial( {map: gold} );
+						coneg_2 = new THREE.Mesh( geometry, material );
+						coneg_2.position.x = 400;
+						coneg_2.position.y = 500;
+						coneg_2.position.z = 725;
+						scene.add( coneg_2 );
+
+						//CONES: G (3)
+	                	var geometry = new THREE.ConeBufferGeometry( 25, 45, 30 );
+						var material = new THREE.MeshBasicMaterial( {map: gold} );
+						coneg_3 = new THREE.Mesh( geometry, material );
+						coneg_3.position.x = 375;
+						coneg_3.position.y = 540;
+						coneg_3.position.z = 680;
+						scene.add( coneg_3 );
+
 						//CONES: H (1)
 	                	var geometry = new THREE.ConeBufferGeometry( 25, 45, 30 );
 						var material = new THREE.MeshBasicMaterial( {map: gold} );
 						coneh_1 = new THREE.Mesh( geometry, material );
-						coneh_1.position.x = 450;
+						coneh_1.position.x = 465;
 						coneh_1.position.y = 440;
 						coneh_1.position.z = 600;
 						scene.add( coneh_1 );
@@ -1112,7 +1166,7 @@
 	                	var geometry = new THREE.ConeBufferGeometry( 25, 45, 30 );
 						var material = new THREE.MeshBasicMaterial( {map: gold} );
 						coneh_2 = new THREE.Mesh( geometry, material );
-						coneh_2.position.x = 450;
+						coneh_2.position.x = 440;
 						coneh_2.position.y = 500;
 						coneh_2.position.z = 600;
 						scene.add( coneh_2 );
@@ -1121,7 +1175,7 @@
 	                	var geometry = new THREE.ConeBufferGeometry( 25, 45, 30 );
 						var material = new THREE.MeshBasicMaterial( {map: gold} );
 						coneh_3 = new THREE.Mesh( geometry, material );
-						coneh_3.position.x = 450;
+						coneh_3.position.x = 430;
 						coneh_3.position.y = 540;
 						coneh_3.position.z = 600;
 						scene.add( coneh_3 );
@@ -1259,12 +1313,20 @@
 				conec_3.rotation.z = -0.4;
 
 				//CONES D
-				coned_1.rotation.x = -20.2;
+				coned_1.rotation.x = -20.4;
 				coned_1.rotation.z = 1.4;
 				coned_2.rotation.x = -19.8;
 				coned_2.rotation.z = 1.4;
 				coned_3.rotation.x = -19.6;
 				coned_3.rotation.z = 1.4;
+
+				//CONES E
+				conee_1.rotation.x = 0.9;
+				conee_1.rotation.z = 1.0;
+				conee_2.rotation.x = 0.9;
+				conee_2.rotation.z = 1.0;
+				conee_3.rotation.x = 0.99;
+				conee_3.rotation.z = 1.0;
 
 				//CONES F
 				conef_1.rotation.x = -20.6;
@@ -1273,13 +1335,22 @@
 				conef_2.rotation.z = 3;
 				conef_3.rotation.x = -2.45;
 				conef_3.rotation.z = 3;
+				//
+
+				//CONES G
+				coneg_1.rotation.x = -20.6;
+				coneg_1.rotation.z = 3.5;
+				coneg_2.rotation.x = -20.93;
+				coneg_2.rotation.z = 3.5;
+				coneg_3.rotation.x = -2.45;
+				coneg_3.rotation.z = 3.5;
 
 				//CONES H
-				coneh_1.rotation.x = -20.2;
+				coneh_1.rotation.x = -20.11;
 				coneh_1.rotation.z = -1.4;
 				coneh_2.rotation.x = -19.8;
 				coneh_2.rotation.z = -1.4;
-				coneh_3.rotation.x = -19.6;
+				coneh_3.rotation.x = -19.5;
 				coneh_3.rotation.z = -1.4;
 
 				//CONE PIC
